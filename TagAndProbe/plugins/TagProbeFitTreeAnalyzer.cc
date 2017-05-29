@@ -38,7 +38,8 @@ TagProbeFitTreeAnalyzer::TagProbeFitTreeAnalyzer(const edm::ParameterSet& pset):
   if (pset.existsAs<bool>("binnedFit")) {
     bool binned = pset.getParameter<bool>("binnedFit");
     fitter.setBinnedFit(binned, binned ? pset.getParameter<uint32_t>("binsForFit") : 0);
-  } else if (pset.existsAs<uint32_t>("binsForMassPlots")) {
+  }
+  if (pset.existsAs<uint32_t>("binsForMassPlots")) {
     fitter.setBinsForMassPlots(pset.getParameter<uint32_t>("binsForMassPlots"));
   }
 

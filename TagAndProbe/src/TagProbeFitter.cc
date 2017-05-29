@@ -60,7 +60,7 @@ TagProbeFitter::TagProbeFitter(const std::vector<std::string>& inputFileNames, s
 	outputDirectory = outputFile->mkdir(inputDirectoryName.c_str());
 	numCPU = numCPU_;
 	saveWorkspace = saveWorkspace_;
-	massBins = 0; // automatic default
+	massBins = 50; // automatic default
 	floatShapeParameters = floatShapeParameters_;
 	fixVars = fixVars_;
 	weightVar = "";
